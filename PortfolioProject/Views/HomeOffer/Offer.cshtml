@@ -1,0 +1,81 @@
+﻿@using PortfolioProject.Models
+@model List<Offers>
+
+
+<div class="container pt-lg-0 pt-md-4 pt-2">
+    <div class="row align-items-center">
+        <div class="col-lg-7 pe-lg-5 align-items-center">
+            <div class="row two-grids">
+
+                @*<div class="col-sm-6 grids_info d-flex mt-sm-0 mt-4">
+                    <i class="@item.icon"></i>
+                    <div class="detail ms-3">
+                        <h4 class="w3l-subtitle">@item.Heading</h4>
+                        <p>
+                            @item.Description
+                        </p>
+                    </div>
+                </div>*@
+                
+                @foreach (var item in Model)
+                {
+                    <div class="@item.Class">
+                        <i class="@item.Icon"></i>
+                        <div class="detail ms-3">
+                            <h4 class="w3l-subtitle">@item.Heading</h4>
+                            <p>
+                                @item.Description
+                            </p>
+                        </div>
+                    </div>
+       
+                }
+                    @*<div class="col-sm-6 grids_info d-flex mt-md-5 mt-4">
+                <i class="bi bi-laptop"></i>
+                <div class="detail ms-3">
+                    <h4 class="w3l-subtitle">WPF</h4>
+                    <p>
+                        WPF (Windows Presentation Foundation) ist ein grafisches Framework von Microsoft,
+                        das die Entwicklung moderner und interaktiver Benutzeroberflächen für Windows-Anwendungen ermöglicht.
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-6 grids_info d-flex mt-md-5 mt-4">
+                <i class="fab fa-css3-alt"></i>
+                <div class="detail ms-3">
+                    <h4 class="w3l-subtitle">Web Design</h4>
+                    <p>
+                        Webdesign ist der Prozess der Gestaltung und Erstellung von ästhetisch ansprechenden und funktionalen Websites,
+                        die eine positive Benutzererfahrung bieten.
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-6 grids_info d-flex mt-md-5 mt-4">
+                <i class="bi bi-database"></i>
+                <div class="detail ms-3">
+                    <h4 class="w3l-subtitle">MSSQL</h4>
+                    <p>
+                        MS SQL (Microsoft SQL Server) ist eine relationale Datenbankmanagement-Software von Microsoft,
+                        die zur Speicherung und Verwaltung von Daten in einer Vielzahl von Anwendungen verwendet wird.
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-6 grids_info d-flex mt-md-5 mt-4">
+                <i class="bi bi-journal-code"></i>
+                <div class="detail ms-3">
+                    <h4 class="w3l-subtitle">Java</h4>
+                    <p>
+                        Java ist eine weit verbreitete, objektorientierte Programmiersprache, die für ihre Plattformunabhängigkeit,
+                        Vielseitigkeit und Einsatzmöglichkeiten in verschiedenen Anwendungsbereichen bekannt ist.
+                    </p>
+                </div>
+            </div>*@
+                </div>
+        </div>
+        <div class="col-lg-5 ps-lg-5 my-image mt-lg-0 mt-4">
+            <img src="~/Images/Businessfoto2.png" alt="" class="img-fluid">
+        </div>
+
+    </div>
+</div>
+

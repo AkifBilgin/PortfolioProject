@@ -1,0 +1,53 @@
+﻿@using PortfolioProject.Models;
+@model List<Skills>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<section id="container">
+    <section id="main-content">
+        <section class="wrapper">
+            <div class="table-agile-info">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Skills
+                    </div>
+                    <div style="overflow-y: auto;">
+                        <table class="table table-bordered">
+
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Skill</th>
+                                    <th>Parameter</th>
+                                 </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.ID</td>
+                                        <td>@item.Skill</td>
+                                        <td>@item.SkillParameter</td>
+                                        <td><a href="/Skills/DeleteSkill/@item.ID" class="btn btn-outline-danger"><i class="fa fa-remove"> Löschen</i></a></td>
+                                        <td><a href="/Skills/UpdateSkill/@item.ID" class="btn btn-outline-success"><i class="fa fa-upload"> Update</i></a></td>
+                                    </tr>
+                                }
+
+
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+                <a href="/Skills/AddSkill" class="btn btn-outline-primary"><i class="bi bi-plus-square-fill"> Skill Hinzufügen</i></a>
+            </div>
+        </section>
+        <!-- footer -->
+        <!-- / footer -->
+    </section>
+
+    <!--main content end-->
+</section>

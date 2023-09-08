@@ -1,0 +1,57 @@
+﻿@using PortfolioProject.Models
+@model List<Heading>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_CvLAyout.cshtml";
+}
+<br />
+<section id="home" class="w3l-banner pt-5">
+    <div class="container pt-lg-5 pt-md-4">
+        <div class="row pt-lg-5 pt-4">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-7 banner-info-grid pt-lg-0 pt-5">
+
+                    <h1 class="mb-3">@item.Introduction</h1>
+                    <h3 class="mb-4"> <span class="typed-text"></span><span class="cursor">&nbsp</span> </h3>
+                    <p>
+                        @item.Description
+                    </p>
+
+                    <a class="btn btn-primary btn-style mt-5 me-2" href="/HomeContact/Index"> Kontakt </a>
+                    <a class="btn btn-style transparent-btn mt-5" href="#projects"> Meine Projekte </a>
+
+                </div>
+
+                <div class="col-lg-5 text-lg-end my-image mt-lg-0 mt-4">
+                    <img src="/Images/Businessfoto2.png" class="img-fluid" />
+                </div>
+
+            }
+        </div>
+    </div>
+</section>
+
+<section class="w3l-about py-5" id="about">
+    @Html.Action("About", "CustomAbout")
+</section>
+
+<section class="w3l-skills py-5" id="skills">
+    @Html.Action("Skills", "HomeSkill")
+</section>
+
+<section class="w3l-whychooseus pt-5">
+    @Html.Action("Offer", "HomeOffer")
+</section>
+
+<section class="w3-gallery py-5" id="projects">
+    <div class="container py-lg-5 py-md-4 py-2">
+        <div class="title-heading-w3 mx-auto text-center mb-sm-5 mb-4">
+            <h3 class="w3l-title-main mb-2">Meine Projekte</h3>
+        </div>
+
+        @Html.Action("Project", "HomeProject")
+
+    </div>
+
+</section>

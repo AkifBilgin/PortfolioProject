@@ -1,0 +1,23 @@
+﻿@using PortfolioProject.Models
+@model List<Projects>
+
+
+<div class="row portfolio-area clearfix p-0 m-0">
+    @foreach (var item in Model)
+    {
+        <div class="@item.Class" data-id="@item.DataId" data-type="@item.DataType">
+            <span class="image-block">
+                <a class="image-zoom" href="@item.Image" data-gal="prettyPhoto[gallery]">
+                    <div class="content-overlay"></div>
+                    <img src="@item.Image" class="img-fluid w3layouts agileits" alt="portfolio-img">
+                    <div class="content-details fadeIn-bottom">
+                        <h3 class="content-title">@item.Heading</h3>
+                        <p class="content-text">@item.Description</p>
+                        <a href="@item.GitHubLink" class="about-icon" target="_blank" rel="noopener noreferrer">mehr Infos...</a>
+                    </div>
+                </a>
+            </span>
+        </div>
+    }
+
+</div>

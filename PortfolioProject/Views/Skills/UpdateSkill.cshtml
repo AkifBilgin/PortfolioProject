@@ -1,0 +1,26 @@
+﻿@model PortfolioProject.Models.Skills
+@{
+    ViewBag.Title = "UpdateSkill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h2>Skill Update</h2>
+
+<section id="container">
+    <section id="main-content">
+        <section class="wrapper">
+
+            @using (Html.BeginForm("UpdateSkill", "Skills", FormMethod.Post))
+            {
+                @Html.HiddenFor(s=>s.ID)
+                @Html.Label("Skill")
+                @Html.TextBoxFor(s => s.Skill, new { @class = "form-control", @type = "text" })
+                @Html.Label("Parameter")
+                @Html.TextBoxFor(s => s.SkillParameter, new { @class = "form-control", @type = "text" })
+                <br />
+                <button type="submit" class="btn btn-primary">Update</button>
+
+            }
+        </section>
+    </section>
+</section>
+

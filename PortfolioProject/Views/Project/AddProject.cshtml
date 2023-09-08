@@ -1,0 +1,32 @@
+﻿@model PortfolioProject.Models.Projects
+@{
+    ViewBag.Title = "AddProject";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Über mich Hinzufügen</h2>
+
+<section id="container">
+    <section id="main-content">
+        <section class="wrapper">
+
+            @using (Html.BeginForm("AddProject", "Project", FormMethod.Post))
+            {
+                @Html.Label("Überschrift")
+                @Html.TextBoxFor(a => a.Heading, new { @class = "form-control", @type = "text" })
+                @Html.Label("Beschreibung")
+                @Html.TextBoxFor(a => a.Description, new { @class = "form-control", @type = "text" })
+                @Html.Label("Bild")
+                @Html.TextBoxFor(a => a.Image, new { @class = "form-control", @type = "text" })
+                @Html.Label("GitHub Link")
+                @Html.TextBoxFor(a => a.GitHubLink, new { @class = "form-control", @type = "text" })
+                @*<label for="disabledTextInput" class="form-label">Disabled input</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">*@
+
+                <br />
+                <button type="submit" class="btn btn-primary">Hinzufügen</button>
+
+            }
+        </section>
+    </section>
+</section>

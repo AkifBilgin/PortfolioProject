@@ -1,0 +1,27 @@
+﻿@model PortfolioProject.Models.Offers
+@{
+    ViewBag.Title = "UpdateOffer";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h2>Angebot ändern</h2>
+
+<section id="container">
+    <section id="main-content">
+        <section class="wrapper">
+
+            @using (Html.BeginForm("UpdateOffer", "Offer", FormMethod.Post))
+            {
+                @Html.HiddenFor(o=>o.ID)
+                @Html.Label("Überschrift")
+                @Html.TextBoxFor( o=> o.Heading, new { @class = "form-control", @type = "text" })
+                @Html.Label("Beschreibung")
+                @Html.TextBoxFor(o => o.Description, new { @class = "form-control", @type = "text" })
+                @Html.Label("Icon")
+                @Html.TextBoxFor(o => o.Icon, new { @class = "form-control", @type = "text" })
+                <br />
+                <button type="submit" class="btn btn-primary">Hinzufügen</button>
+
+            }
+        </section>
+    </section>
+</section>

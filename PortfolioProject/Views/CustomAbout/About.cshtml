@@ -1,0 +1,65 @@
+﻿@using PortfolioProject.Models;
+@model List<About>
+
+@foreach (var item in Model)
+{
+    <div class="container py-md-5 py-2">
+        <div class="row w3l-row">
+            <div class="col-lg-5 my-image pe-lg-5 mb-lg-0 mb-md-5 mb-4">
+                <img src="~/Images/Bewerbungsfoto.JPG"  alt="" class="img-fluid">
+            </div>
+            <div class="col-lg-7 w3l-about-info px-lg-4 align-center">
+                <h6 class="w3l-title-small mb-1">Über mich</h6>
+                <h3 class="w3l-title-main mb-2">@item.Heading</h3>
+                <p class="my-4 pe-lg-5">@item.Description1</p>
+                <p class="my-4 pe-lg-5">@item.Description</p>
+                <div class="my-info mt-4">
+                    <div class="single-info">
+                        <span>Name:</span>
+                        <p>@item.Name</p>
+                    </div>
+                    <div class="single-info">
+                        <span>Aus:</span>
+                        <p>@item.Addresse</p>
+                    </div>
+                    <div class="single-info">
+                        <span>Email:</span>
+                        <p><a href="mailto:@item.Email">@item.Email</a></p>
+                    </div>
+                    <div class="single-info">
+                        <span>Telefon:</span>
+                        <p>@item.Phone</p>
+                    </div>
+                </div>
+
+                <ul class="follow-social mt-lg-5 mt-4">
+                    <li>
+                        <h5 class="me-md-3">folge mir</h5>
+                    </li>
+
+                    <li>
+                        <a href="https://in.linkedin.com/company/w3layouts"><span class="fab fa-instagram-square"></span></a>
+                    </li>
+
+                    <li>
+                        <a href="https://in.linkedin.com/company/w3layouts"><span class="fab fa-linkedin-in"></span></a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.facebook.com/w3layouts/">
+                            <span class="fab fa-facebook-f"></span>
+                        </a>
+                    </li>
+
+                    <li><a href="https://twitter.com/W3layouts"><span class="fab fa-github-square"></span></a></li>
+
+                </ul>
+                <div class="w3l-btn">
+                    <a href="/HomeContact/Index" class="btn btn-style btn-primary mt-lg-5 mt-4 me-md-2">Kontakt</a>
+                    <a href="#projects" class="btn btn-style btn-secondary mt-lg-5 mt-4">Projekte</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}

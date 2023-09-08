@@ -1,0 +1,41 @@
+﻿@model PortfolioProject.Models.About
+@{
+    ViewBag.Title = "AddAbout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Über mich Hinzufügen</h2>
+
+<section id="container">
+    <section id="main-content">
+        <section class="wrapper">
+
+            @using (Html.BeginForm("AddAbout", "About", FormMethod.Post))
+            {
+                @Html.Label("Überschrift")
+                @Html.TextBoxFor(a => a.Heading, new { @class = "form-control", @type = "text" })
+                @Html.Label("Beschreibung1")
+                @Html.TextBoxFor(a => a.Description1, new { @class = "form-control", @type = "text" })
+                @Html.Label("Beschreibung2")
+                @Html.TextBoxFor(a => a.Description, new { @class = "form-control", @type = "text" })
+                @Html.Label("Name")
+                @Html.TextBoxFor(a => a.Name, new { @class = "form-control", @type = "text" })
+                @Html.Label("Email")
+                @Html.TextBoxFor(a => a.Email, new { @class = "form-control", @type = "text" })
+                @Html.Label("Adresse")
+                @Html.TextBoxFor(a => a.Addresse, new { @class = "form-control", @type = "text" })
+                @Html.Label("Telefon")
+                @Html.TextBoxFor(a => a.Phone, new { @class = "form-control", @type = "text" })
+                @Html.Label("Bild")
+                @Html.TextBoxFor(a => a.Image, new { @class = "form-control", @type = "text" })
+                @*<label for="disabledTextInput" class="form-label">Disabled input</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">*@
+
+                <br />
+                <button type="submit" class="btn btn-primary">Hinzufügen</button>
+
+            }
+        </section>
+    </section>
+</section>
+

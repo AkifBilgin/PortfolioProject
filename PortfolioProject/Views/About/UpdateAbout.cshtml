@@ -1,0 +1,42 @@
+﻿@model PortfolioProject.Models.About
+@{
+    ViewBag.Title = "UpdateAbout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Update</h2>
+
+<section id="container">
+    <section id="main-content">
+        <section class="wrapper">
+
+            @using (Html.BeginForm("UpdateAbout", "About", FormMethod.Post))
+            {
+                @Html.HiddenFor(h => h.ID)
+                @Html.Label("Überschrift")
+                @Html.TextBoxFor(h => h.Heading, new { @class = "form-control", @type = "text" })
+                @Html.Label("Beschreibung1")
+                @Html.TextBoxFor(h => h.Description1, new { @class = "form-control", @type = "text" })
+                @Html.Label("Beschreibung2")
+                @Html.TextBoxFor(h => h.Description, new { @class = "form-control", @type = "text" })
+                @Html.Label("Name ")
+                @Html.TextBoxFor(h => h.Name, new { @class = "form-control", @type = "text" })
+                @Html.Label("Email")
+                @Html.TextBoxFor(h => h.Email, new { @class = "form-control", @type = "text" })
+                @Html.Label("Adresse")
+                @Html.TextBoxFor(h => h.Addresse, new { @class = "form-control", @type = "text" })
+                @Html.Label("Telefon")
+                @Html.TextBoxFor(h => h.Phone, new { @class = "form-control", @type = "text" })
+                @Html.Label("Bild")
+                @Html.TextBoxFor(h => h.Image, new { @class = "form-control", @type = "text" })
+                @*<label for="disabledTextInput" class="form-label">Disabled input</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">*@
+
+                <br />
+                <button type="submit" class="btn btn-primary">Update</button>
+
+            }
+        </section>
+    </section>
+</section>
+

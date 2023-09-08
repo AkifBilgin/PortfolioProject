@@ -1,0 +1,51 @@
+﻿@using PortfolioProject.Models
+@model List<Messages> 
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<section id="container">
+    <section id="main-content">
+        <section class="wrapper">
+            <div class="table-agile-info">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Nachrichten
+                    </div>
+                    <div style="overflow-y: auto;">
+                        <table class="table table-bordered">
+
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Telefon</th>
+                                    <th>Nachricht</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.ID</td>
+                                        <td>@item.Name</td>
+                                        <td>@item.Email</td>
+                                        <td>@item.Telefon</td>
+                                        <td>@item.Message</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- footer -->
+        <!-- / footer -->
+    </section>
+
+    <!--main content end-->
+</section>
+

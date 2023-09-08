@@ -1,0 +1,73 @@
+﻿@using PortfolioProject.Models
+@model List<Heading>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+
+
+<section id="container">
+    <section id="main-content">
+        <section class="wrapper">
+            <div class="table-agile-info">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Heading Tabelle
+                    </div>
+                    <div>
+                        <table class="table table-bordered">
+
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Überschrift</th>
+                                    <th>Skill 1</th>
+                                    <th>Skill 2</th>
+                                    <th>Skill 3</th>
+                                    <th>Beschreibung</th>
+                                
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.ID</td>
+                                        <td>@item.Introduction</td>
+                                        <td>@item.Skills</td>
+                                        <td>@item.Skills2 </td>
+                                        <td>@item.Skills3</td>
+                                        <td>@item.Description</td>
+                                        <td><a href="/Heading/DeleteHeading/@item.ID" class="btn btn-outline-danger"><i class="fa fa-remove"> Löschen</i></a></td>
+                                        <td><a href="/Heading/UpdateHeading/@item.ID" class="btn btn-outline-success"><i class="fa fa-upload"> Update</i></a></td>
+                                    </tr>
+                                }
+
+
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+                <a href="/Heading/AddHeading" class="btn btn-outline-primary"><i class="bi bi-plus-square-fill"> Heading Hinzufügen</i></a>
+            </div>
+        </section>
+        <!-- footer -->
+        <!-- / footer -->
+    </section>
+
+    <!--main content end-->
+</section>
+
+
+

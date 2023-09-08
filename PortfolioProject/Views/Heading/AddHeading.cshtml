@@ -1,0 +1,35 @@
+﻿
+@model PortfolioProject.Models.Heading
+@{
+    ViewBag.Title = "AddHeading";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Überschrift Hinzufügen</h2>
+
+<section id="container">
+    <section id="main-content">
+        <section class="wrapper">
+
+            @using (Html.BeginForm("AddHeading", "Heading", FormMethod.Post))
+            {
+                @Html.Label("Überschrift")
+                @Html.TextBoxFor(h => h.Introduction, new { @class = "form-control", @type = "text" })
+                @Html.Label("Skill 1 ")
+                @Html.TextBoxFor(h => h.Skills, new { @class = "form-control", @type = "text" })
+                @Html.Label("Skill 2 ")
+                @Html.TextBoxFor(h => h.Skills2, new { @class = "form-control", @type = "text" })
+                @Html.Label("Skill 3 ")
+                @Html.TextBoxFor(h => h.Skills3, new { @class = "form-control", @type = "text" })
+                @Html.Label("Beschreibung")
+                @Html.TextBoxFor(h => h.Description, new { @class = "form-control", @type = "text" })
+                @*<label for="disabledTextInput" class="form-label">Disabled input</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">*@
+
+                <br />
+                <button type="submit" class="btn btn-primary">Hinzufügen</button>
+
+            }
+        </section>
+    </section>
+</section>

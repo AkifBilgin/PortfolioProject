@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_ContactLayout.cshtml";
+}
+
+
+<!-- contact banner -->
+<section class="w3l-about-breadcrumb text-center">
+    <div class="breadcrumb-bg breadcrumb-bg-about py-5">
+        <div class="container py-lg-5 mt-5">
+            <div class="banner-info-grid mt-5">
+                <h2 class="w3l-title-breadcrumb">Kontakt</h2>
+            </div>
+            <ul class="breadcrumbs-custom-path">
+                <li><a href="#url">Home</a></li>
+                <li class="active"><span class="fa fa-angle-right mx-2" aria-hidden="true"></span>Kontakt</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- //contact banner -->
+<!-- contact -->
+<section class="w3l-contacts-12">
+    <div class="contact-top pt-5">
+        <div class="container py-lg-5 py-2">
+            <div class="title-heading-w3 mx-auto text-center mb-sm-5 mb-4">
+                <h3 class="w3l-title-main">Kontaktformular </h3>
+            </div>
+            <div class="d-grid cont-main-top">
+                <!-- contact form -->
+                <div class="contacts12-main">
+                    <form action="/HomeContact/SendMessage" method="post" class="main-input" onsubmit="showMessage(event)">
+                        <div class="top-inputs d-grid"> 
+                            <input type="text" placeholder="Name" name="Name" id="name" required="">
+                            <input type="email" name="Email" placeholder="Email" id="email" required="">
+                        </div>
+                        <input type="text" placeholder="Telefon" name="Telefon" id="telefon" required="">
+                        <textarea placeholder="Ihre Nachricht" name="Message" id="Message" required=""></textarea>
+                        <div class="text-end">
+                            <button type="submit" class="btn btn-primary btn-style">Senden</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- //contact form -->
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- //contact -->

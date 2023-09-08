@@ -1,0 +1,28 @@
+﻿@using PortfolioProject.Models
+@model List<Skills>
+<div class="container py-lg-5 py-md-4 py-3">
+    <div class="row">
+        <div class="col-lg-6 pe-lg-5">
+            <img src="~/Templates/ui-portfolio/starter/assets/images/about1.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="col-lg-6 mt-lg-0 mt-5 w3l-content-6 px-lg-4 align-self-center">
+            <h3 class="w3l-title-main">Meine Fähigkeiten</h3>
+            <p class="mt-4">
+                Ich habe meine Programmiererfahrung mit C# begonnen und seitdem konzentriere ich mich hauptsächlich auf diese Sprache. Gleichzeitig strebe ich jedoch danach,
+                meine Fähigkeiten in anderen Bereichen der Informatik kontinuierlich auszubauen und mich weiterzuentwickeln.
+            </p>
+            @foreach (var item in Model)
+            {
+                <div class="progress-info mt-5">
+                    <h6 class="progress-tittle">@item.Skill</h6>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width:@item.SkillParameter%"  aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                </div> 
+            }
+
+
+        </div>
+    </div>
+</div>
