@@ -21,3 +21,6 @@ MimeKit
 ![Skills2](https://res.cloudinary.com/djlqp41lf/image/upload/v1694197554/Skills2_dcb11s.png)
 ![Projects2](https://res.cloudinary.com/djlqp41lf/image/upload/v1694197554/Projects2_yc94fi.png)
 ![Contact](https://res.cloudinary.com/djlqp41lf/image/upload/v1694197553/Contact_qzeij1.png)
+
+# Installation
+Clone the project and create a database, then connect it to the project
